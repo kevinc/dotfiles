@@ -1,0 +1,14 @@
+[color]
+	ui = true
+[user]
+	name = Kevin Cunningham
+	email = kevin.cunningham3@gmail.com
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[push]
+	default = simple
+[core]
+	editor = /usr/bin/vim

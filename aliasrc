@@ -1,0 +1,5 @@
+alias rails='bundle exec rails'
+alias rake='bundle exec rake'
+alias rspec='bundle exec rspec'
+
+alias gpo='git push origin'
