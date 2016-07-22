@@ -31,6 +31,10 @@ Plugin 'scrooloose/nerdcommenter'
 " Rails
 Plugin 'tpope/vim-rails'
 
+if filereadable(expand("~/.custom-plugins.vim"))
+  source ~/.custom-plugins.vim
+endif
+
 call vundle#end()
 syntax on
 
@@ -82,3 +86,14 @@ vmap s :!sort<CR>
 vmap u :!sort -u<CR>
 
 au BufRead,BufNewFile *.jbuilder setf ruby
+
+" Paste mode
+set pastetoggle=<F1>
+map <Leader>p :set invpaste<cr>
+
+set dir=~/.tmp
+
+" Source custom vim from ~/.custom.vim
+if filereadable(expand("~/.custom.vim"))
+  source ~/.custom.vim
+endif
