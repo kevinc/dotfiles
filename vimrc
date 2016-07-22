@@ -38,6 +38,10 @@ endif
 call vundle#end()
 syntax on
 
+" Move swp files to central place
+set swapfile
+set dir=~/.tmp
+
 " Display options
 set nocursorline
 set number
@@ -51,6 +55,9 @@ set laststatus=2
 
 filetype plugin indent on
 
+" Autocomplete
+set wildmenu
+set wildmode=list:longest,full
 set complete=.,w,b,u,U,t,i,d
 
 " NERDTree mappings
@@ -85,13 +92,14 @@ let localmapleader=","
 vmap s :!sort<CR>
 vmap u :!sort -u<CR>
 
+" Fugitive bindings
+map <silent> <Leader>gb :Gblame<CR>
+
 au BufRead,BufNewFile *.jbuilder setf ruby
 
 " Paste mode
 set pastetoggle=<F1>
 map <Leader>p :set invpaste<cr>
-
-set dir=~/.tmp
 
 " Source custom vim from ~/.custom.vim
 if filereadable(expand("~/.custom.vim"))
