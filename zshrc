@@ -83,8 +83,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH="/usr/local/bin:$PATH"
 source "$HOME/.aliasrc"
 
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
-export PATH="/usr/local/bin:/usr/local/share/npm/bin:$PATH"

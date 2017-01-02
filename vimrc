@@ -94,6 +94,7 @@ vmap u :!sort -u<CR>
 
 " Fugitive bindings
 map <silent> <Leader>gb :Gblame<CR>
+map <silent> <Leader>gg :Gbrowse<CR>
 
 au BufRead,BufNewFile *.jbuilder setf ruby
 
