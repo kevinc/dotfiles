@@ -49,11 +49,11 @@ ZSH_THEME="nicoulaj"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting poetry)
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+#export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,8 +83,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="/usr/local/bin:$PATH"
 source "$HOME/.aliasrc"
+source "$HOME/.custom.zsh"
 
-eval "$(rbenv init -)"
-eval "$(nodenv init -)"
+eval "$(direnv hook zsh)"
+
+if [[ -z $TMUX ]]; then
+  export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+  export PATH="$HOME/.poetry/bin:/usr/local/sbin:$PATH"
+fi
+
+export PATH="$HOME/.poetry/bin:$PATH"

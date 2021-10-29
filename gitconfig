@@ -2,7 +2,8 @@
 	ui = true
 [user]
 	name = Kevin Cunningham
-	email = kevin.cunningham3@gmail.com
+	email = kevin@sureapp.com
+	signingkey = 1184FCBE3760CA54
 [alias]
 	co = checkout
 	ci = commit
@@ -11,4 +12,10 @@
 [push]
 	default = simple
 [core]
-	editor = /usr/bin/vim
+	editor = /usr/local/bin/vim
+	autocrlf = input
+	excludesfile = /Users/kevin/.gitignore-global
+[commit]
+	gpgsign = true
+[pull]
+	rebase = true
