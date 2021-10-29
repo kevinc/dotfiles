@@ -53,7 +53,7 @@ plugins=(git asdf zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+#export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,5 +83,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="/usr/local/bin:$PATH"
 source "$HOME/.aliasrc"
+<<<<<<< HEAD
+=======
+source "$HOME/.custom.zsh"
+
+eval "$(direnv hook zsh)"
+
+if [[ -z $TMUX ]]; then
+  export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+  export PATH="$HOME/.poetry/bin:/usr/local/sbin:$PATH"
+fi
+
+export PATH="$HOME/.poetry/bin:$PATH"
+>>>>>>> 17b46e8 (changes made while at sure)

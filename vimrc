@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 
 " Lucius colorscheme
 Plug 'jonathanfilip/vim-lucius'
@@ -19,6 +19,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 
 " Text editing
@@ -56,6 +57,7 @@ filetype plugin indent on
 set wildmenu
 set wildmode=list:longest,full
 set complete=.,w,b,u,U,t,i,d
+set wildignore+=*/node_modules/*,*.pyc
 
 " NERDTree mappings
 map <C-n> :NERDTreeToggle<CR>
@@ -90,8 +92,8 @@ vmap s :!sort<CR>
 vmap u :!sort -u<CR>
 
 " Fugitive bindings
-map <silent> <Leader>gb :Gblame<CR>
-map <silent> <Leader>gg :Gbrowse<CR>
+map <silent> <Leader>gb :Git blame<CR>
+map <silent> <Leader>gg :GBrowse<CR>
 
 au BufRead,BufNewFile *.jbuilder setf ruby
 
