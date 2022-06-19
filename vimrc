@@ -1,46 +1,43 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin()
 
 " Lucius colorscheme
-Plugin 'jonathanfilip/vim-lucius'
+Plug 'jonathanfilip/vim-lucius'
 
 " NERDTree
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Auto add 'end'
-Plugin 'tpope/vim-endwise'
+Plug 'tpope/vim-endwise'
 
 " Status line
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Text editing
-Plugin 'ervandew/supertab'
-Plugin 'scrooloose/nerdcommenter'
+Plug 'ervandew/supertab'
+Plug 'scrooloose/nerdcommenter'
 
 " Rails
-Plugin 'tpope/vim-rails'
+Plug 'tpope/vim-rails'
 
 if filereadable(expand("~/.custom-plugins.vim"))
   source ~/.custom-plugins.vim
 endif
 
-call vundle#end()
+call plug#end()
 syntax on
 
 " Move swp files to central place
 set swapfile
-set dir=~/.tmp
+set dir=~/.tmp//
 
 " Display options
 set nocursorline
