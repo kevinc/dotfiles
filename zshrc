@@ -84,8 +84,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source "$HOME/.aliasrc"
-<<<<<<< HEAD
-=======
 source "$HOME/.custom.zsh"
 
 eval "$(direnv hook zsh)"
@@ -94,6 +92,3 @@ if [[ -z $TMUX ]]; then
   export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
   export PATH="$HOME/.poetry/bin:/usr/local/sbin:$PATH"
 fi
-
-export PATH="$HOME/.poetry/bin:$PATH"
->>>>>>> 17b46e8 (changes made while at sure)

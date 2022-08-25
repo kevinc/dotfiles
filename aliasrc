@@ -3,16 +3,22 @@ alias rake='bundle exec rake'
 alias rspec='bundle exec rspec'
 
 alias da='django-admin'
+alias pm='python manage.py'
+alias pytest='pytest --nomigrations'
 
 alias gpo='git push origin'
 alias gfy='git add . && git ci --amend --no-edit && gpo -f'
 alias gpu='git fetch && git rebase $UPSTREAM_BRANCH && gpo -f'
 
+alias kc='kubectl'
+
 function gpc {
   git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
 }
 
-function ca {
-  aws --profile registries-read sso login
-  poetry config http-basic.codeartifact aws "$(aws codeartifact get-authorization-token --domain sure --query authorizationToken --output text --profile registries-read)"
+alias cw-pip='CFLAGS="-Wno-error=implicit-function-declaration" LDFLAGS="-I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib" pip install -r requirements.txt --extra-index-url=https://dl.cloudsmith.io/$CLOUDSMITH_PIP/carta/pip/python/index/'
+alias hd='helm delete'
+
+function kctx {
+  kubectx $1.carta.dev
 }
