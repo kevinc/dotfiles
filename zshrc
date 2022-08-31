@@ -86,6 +86,10 @@ source $ZSH/oh-my-zsh.sh
 source "$HOME/.aliasrc"
 source "$HOME/.custom.zsh"
 
+if [[ -f "$HOME/.secrets.zsh" ]]; then
+  source "$HOME/.secrets.zsh"
+fi
+
 eval "$(direnv hook zsh)"
 
 if [[ -z $TMUX ]]; then
