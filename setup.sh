@@ -3,8 +3,6 @@ if [[ -z $DOTFILES_BRANCH ]]; then
   git checkout $DOTFILES_BRANCH
 fi
 
-sh ./install-dependencies.sh
-
 cwd=`pwd`
 
 for file in `ls`
@@ -15,3 +13,5 @@ do
 done
 
 echo "Symlinks created!"
+
+sh ./install-dependencies.sh
