@@ -1,4 +1,4 @@
-if [ -z $DOTFILES_BRANCH ]; then
+if [ -n "$DOTFILES_BRANCH" ]; then
   echo "Using dotfiles branch: $DOTFILES_BRANCH"
   git checkout $DOTFILES_BRANCH
 fi
