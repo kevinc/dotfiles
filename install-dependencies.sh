@@ -14,4 +14,5 @@ asdf global nodejs 16.17.0
 # Setup vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir ~/.tmp
+vim -E -s -u ~/.vimrc +PlugInstall +qa
 vim +PlugInstall +qa
