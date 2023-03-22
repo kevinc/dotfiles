@@ -84,4 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="/usr/local/bin:$PATH"
+
+if [[ -f "$HOME/.custom.zsh" ]]; then
+  source "$HOME/.custom.zsh"
+fi
+
 source "$HOME/.aliasrc"
