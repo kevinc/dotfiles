@@ -1,15 +1,14 @@
 if [ -n "$DOTFILES_BRANCH" ]; then
-  echo "Using dotfiles branch: $DOTFILES_BRANCH"
-  git checkout $DOTFILES_BRANCH
+	echo "Using dotfiles branch: $DOTFILES_BRANCH"
+	git checkout $DOTFILES_BRANCH
 fi
 
-cwd=`pwd`
+cwd=$(pwd)
 
-for file in `ls`
-do
-  if [ $file != "README.md" ]; then
-    ln -sfv $cwd/$file $HOME/.$file
-  fi
+for file in $(ls); do
+	if [-f $file] && [ $file != "README.md" ]; then
+		ln -sfv $cwd/$file $HOME/.$file
+	fi
 done
 
 echo "Symlinks created!"
